@@ -1,0 +1,6 @@
+{
+  "name": "Flutter & Dart: The Lost Islands",
+  "description": "An immersive, highly animated educational quest to master Flutter & Dart. Navigate 8 modular islands, solve coding trials, and unlock the Golden Compiler treasure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

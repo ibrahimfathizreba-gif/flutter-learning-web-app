@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #059669; /* Elegant Emerald-600 */
+  --color-brand-secondary: #10b981; /* Emerald-500 */
+  --color-brand-dark: #090d16; /* Deep obsidian charcoal */
+  --color-brand-light: #fafbfc; /* Soothing mint-cream off-white */
+
+  /* Overriding teal with soft, elegant emerald/sage greens (highly professional, premium) */
+  --color-teal-50: #f0fdf4;
+  --color-teal-100: #dcfce7;
+  --color-teal-200: #bbf7d0;
+  --color-teal-300: #86efac;
+  --color-teal-400: #34d399; /* Emerald-400 */
+  --color-teal-500: #10b981; /* Emerald-500 */
+  --color-teal-600: #059669; /* Emerald-600 */
+  --color-teal-700: #047857; /* Emerald-700 */
+  --color-teal-800: #065f46;
+  --color-teal-900: #064e3b;
+  --color-teal-950: #022c22;
+  --color-teal-550: #10b981;
+  --color-teal-555: #34d399;
+  
+  /* Overriding sky to match the sleek emerald accent flow */
+  --color-sky-500: #10b981;
+  --color-sky-600: #059669;
+  --color-sky-400: #34d399;
+
+  /* Premium Obsidian Charcoal and Silver-Slate neutral palette. */
+  /* Keeps the interface extremely eye-friendly, balanced, and state-of-the-art */
+  --color-slate-50: #f8fafc;   /* light mode background - soft warm off-white */
+  --color-slate-100: #f1f5f9;  /* light mode subtle panels or borders */
+  --color-slate-200: #e2e8f0;  /* standard light borders */
+  --color-slate-300: #cbd5e1;  /* medium light accents */
+  --color-slate-400: #94a3b8;  /* subtle text */
+  --color-slate-500: #64748b;  /* helper text */
+  --color-slate-600: #475569;  /* body text secondary */
+  --color-slate-700: #334155;  /* body text primary */
+  --color-slate-800: #1e293b;  /* dark panels secondary */
+  --color-slate-850: #111827;  /* dark borders or subtle cards */
+  --color-slate-900: #0f172a;  /* deep rich dark card background */
+  --color-slate-950: #090d16;  /* glorious deep charcoal-black general background */
+}
+
+/* Custom CSS animations for the Lost Islands nautical feel */
+@keyframes island-float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes ship-float {
+  0% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-4px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(-1deg); }
+}
+
+@keyframes wave-flow {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-15px) translateY(5px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+@keyframes glowing-dust {
+  0% { opacity: 0.2; transform: translateY(0px) scale(0.8); }
+  50% { opacity: 0.6; transform: translateY(-10px) scale(1.1); }
+  100% { opacity: 0.2; transform: translateY(0px) scale(0.8); }
+}
+
+.animate-island-float {
+  animation: island-float 6s ease-in-out infinite;
+}
+
+.animate-ship-float {
+  animation: ship-float 4s ease-in-out infinite;
+}
+
+.animate-wave-flow {
+  animation: wave-flow 12s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glowing-dust {
+  animation: glowing-dust 5s ease-in-out infinite;
+}
+
+/* Smooth custom scrollbars for code and logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.7);
+}
+
+/* Code Playground Styles */
+.code-textarea {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  tab-size: 2;
+}
